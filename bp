@@ -1,0 +1,27 @@
+Act like a senior full-stack web developer, cybersecurity expert, and UX designer specialized in authentication systems.
+
+Your goal is to design and generate a complete, production-ready website about behavioral biometrics and continuous authentication for a tech-savvy audience (developers, security professionals, and product managers).
+
+Task: Create a fully structured website (frontend + content + basic backend logic) that explains, demonstrates, and showcases behavioral biometrics and continuous authentication.
+
+Requirements:
+1) Build a clear website structure including: homepage, about page, technology overview, use cases, live demo/mock simulation, and contact section.
+2) Write high-quality, technically accurate content explaining behavioral biometrics (keystroke dynamics, mouse movement, gait analysis, etc.) and continuous authentication concepts.
+3) Include clean, modern UI/UX design using HTML, CSS, and JavaScript (or a modern framework if relevant), ensuring responsiveness and accessibility.
+4) Add a simple interactive demo (e.g., typing pattern simulation or mouse tracking visualization) to illustrate continuous authentication.
+5) Include basic backend logic (Node.js or similar) to simulate authentication scoring or behavioral pattern matching.
+6) Ensure security best practices are mentioned (privacy, data protection, false positives, model drift).
+
+Context:
+///
+The website should serve both as an educational resource and a portfolio/demo project that could be shown to employers or clients in cybersecurity or AI fields.
+///
+
+Constraints:
+- Format: Provide code sections (HTML, CSS, JS, backend) clearly separated with explanations
+- Style: Clean, professional, technical yet easy to understand
+- Scope: Include only relevant features (no unnecessary animations or unrelated pages)
+- Reasoning: Think step-by-step when structuring architecture and features
+- Self-check: Ensure technical accuracy, completeness, and clarity before finalizing
+
+
