@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioral Biometrics | Continuous Authentication</title>
+    <meta name="description" content="Explore the future of security with behavioral biometrics. Discover continuous authentication through keystroke dynamics and mouse tracking.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">BioMetrics<span>.</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#technology">Technology</a>
+            <a href="#usecases">Use Cases</a>
+            <a href="#demo" class="demo-btn">Live Demo</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="badge">Next-Gen Security</div>
+                <h1>Invisible Security.<br><span class="gradient-text">Continuous Authentication.</span></h1>
+                <p>Verify identities silently in the background based on how users type, move their mouse, and interact with applications. Zero friction. Absolute security.</p>
+                <div class="hero-actions">
+                    <a href="#demo" class="btn btn-primary">Try Live Demo</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-panel dynamic-graph">
+                    <div class="graph-line"></div>
+                    <div class="graph-nodes">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="auth-status">Authenticating...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2>What is Behavioral Biometrics?</h2>
+                <p>Unlike physical biometrics (fingerprints, facial recognition), behavioral biometrics analyzes the unique patterns in human activity. It's not about <em>what you are</em>, but <em>how you act</em>.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-panel">
+                    <div class="icon">⌨️</div>
+                    <h3>Keystroke Dynamics</h3>
+                    <p>Analyzes flight time (time between key presses) and dwell time (duration a key is held) to create a unique typing signature.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="icon">🖱️</div>
+                    <h3>Mouse Movement</h3>
+                    <p>Tracks cursor trajectory, speed, acceleration, and click patterns to differentiate legitimate users from bots or impostors.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="icon">📱</div>
+                    <h3>Touch Interactions</h3>
+                    <p>Measures swipe angles, pressure, and device orientation on mobile platforms for continuous verification.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology" class="technology">
+            <div class="container">
+                <div class="tech-content">
+                    <h2>The Science Behind the Scenes</h2>
+                    <p>Our platform leverages advanced machine learning models to establish a baseline of normal behavior for each user. As the user interacts with the application, we continuously score their current session against their established profile.</p>
+                    <ul class="tech-list">
+                        <li><strong>Privacy-First:</strong> We don't log what you type, only <em>how</em> you type.</li>
+                        <li><strong>Model Drift Mitigation:</strong> Profiles adapt dynamically over time to account for natural changes in behavior.</li>
+                        <li><strong>Low False Positives:</strong> High-dimensional feature extraction ensures extreme accuracy.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section id="usecases" class="usecases">
+             <div class="section-header">
+                <h2>Industry Applications</h2>
+            </div>
+            <div class="usecase-grid">
+                <div class="usecase-item glass-panel">
+                    <h3>🏦 Financial Services</h3>
+                    <p>Prevent account takeover (ATO) and detect fraudulent transactions in real-time without adding friction to the user experience.</p>
+                </div>
+                <div class="usecase-item glass-panel">
+                    <h3>💻 Remote Work</h3>
+                    <p>Ensure that the person who logged in is still the person using the device throughout the entire workday. Zero-trust architecture.</p>
+                </div>
+                <div class="usecase-item glass-panel">
+                    <h3>🛒 E-commerce</h3>
+                    <p>Differentiate between human shoppers and automated scalping bots during high-demand product drops.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Demo Section -->
+        <section id="demo" class="demo">
+            <div class="section-header">
+                <h2>Interactive Demo</h2>
+                <p>Type in the box below and move your mouse around to see continuous authentication in action.</p>
+            </div>
+            <div class="demo-container glass-panel">
+                <div class="demo-workspace">
+                    <label for="demo-input">Type a sample sentence:</label>
+                    <textarea id="demo-input" placeholder="The quick brown fox jumps over the lazy dog..."></textarea>
+                    
+                    <div class="mouse-tracking-area" id="mouse-area">
+                        <p>Move your mouse in this area</p>
+                        <div class="cursor-trail" id="cursor-trail"></div>
+                    </div>
+                </div>
+                <div class="demo-dashboard">
+                    <h3>Live Authentication Score</h3>
+                    <div class="score-display">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle" id="score-circle"
+                                stroke-dasharray="0, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <text x="18" y="20.35" class="percentage" id="score-text">0%</text>
+                        </svg>
+                    </div>
+                    <div class="status-indicator" id="status-indicator">
+                        <span class="status-dot"></span> <span id="status-text">Waiting for input...</span>
+                    </div>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <span>Typing Cadence:</span>
+                            <span id="metric-typing">-</span>
+                        </div>
+                        <div class="metric">
+                            <span>Mouse Trajectory:</span>
+                            <span id="metric-mouse">-</span>
+                        </div>
+                        <div class="metric">
+                            <span>Confidence Level:</span>
+                            <span id="metric-confidence">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-card glass-panel">
+                <h2>Secure Your Application</h2>
+                <p>Ready to implement continuous authentication?</p>
+                <form id="contact-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Request API Access</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">BioMetrics<span>.</span></div>
+            <p>&copy; 2026 Behavioral Biometrics Demo. Built for demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <script src="js/mock-backend.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
